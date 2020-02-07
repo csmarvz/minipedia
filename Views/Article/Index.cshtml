@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ArticleViewModel>
+
+<ul>
+@foreach (var article in Model)
+{
+    <li>
+        <a asp-area="" asp-controller="Article" asp-action="Get" asp-route-id="@article.Id">@article.Title</a>
+    </li>
+}
+</ul>
+<br />
+<br />
+<a asp-area="" asp-controller="Article" asp-action="Add">Add</a>
